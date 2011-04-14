@@ -860,8 +860,8 @@ static int SerialIdentTabletPC(SERIALTABLET* pSerial)
 static int SerialInitTabletPC(SERIALTABLET* pSerial)
 {
 	pSerial->pfnParse = SerialParseTabletPC;
-	pSerial->state.values[WACOMFIELD_POSITION_X].nMax = 26600;
-	pSerial->state.values[WACOMFIELD_POSITION_Y].nMax = 16900;
+	pSerial->state.values[WACOMFIELD_POSITION_X].nMax = 0x6000;
+	pSerial->state.values[WACOMFIELD_POSITION_Y].nMax = 0x4800;
 	pSerial->state.values[WACOMFIELD_PRESSURE].nMax = 255;
 	return 0;
 }
